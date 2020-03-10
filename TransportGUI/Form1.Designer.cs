@@ -40,6 +40,8 @@
             this.btnBeenden = new System.Windows.Forms.Button();
             this.btnAbfahrtstafel = new System.Windows.Forms.Button();
             this.dgvAuflistung = new System.Windows.Forms.DataGridView();
+            this.btnDropdownAnkunft = new System.Windows.Forms.Button();
+            this.btnDropdownAbfahrt = new System.Windows.Forms.Button();
             this.Abfahrtszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gleis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ankunftsort = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +54,7 @@
             this.ddlAbfahrtsort.FormattingEnabled = true;
             this.ddlAbfahrtsort.Location = new System.Drawing.Point(12, 51);
             this.ddlAbfahrtsort.Name = "ddlAbfahrtsort";
-            this.ddlAbfahrtsort.Size = new System.Drawing.Size(312, 21);
+            this.ddlAbfahrtsort.Size = new System.Drawing.Size(270, 21);
             this.ddlAbfahrtsort.TabIndex = 0;
             this.ddlAbfahrtsort.DropDown += new System.EventHandler(this.ddlAbfahrtsort_DropDown);
             // 
@@ -90,8 +92,8 @@
             this.ddlAnkunftsort.FormattingEnabled = true;
             this.ddlAnkunftsort.Location = new System.Drawing.Point(340, 51);
             this.ddlAnkunftsort.Name = "ddlAnkunftsort";
-            this.ddlAnkunftsort.Size = new System.Drawing.Size(312, 21);
-            this.ddlAnkunftsort.TabIndex = 5;
+            this.ddlAnkunftsort.Size = new System.Drawing.Size(270, 21);
+            this.ddlAnkunftsort.TabIndex = 2;
             this.ddlAnkunftsort.DropDown += new System.EventHandler(this.ddlAnkunftsort_DropDown);
             this.ddlAnkunftsort.SelectedIndexChanged += new System.EventHandler(this.ddlAnkunftsort_SelectedIndexChanged);
             // 
@@ -148,6 +150,7 @@
             // 
             // dgvAuflistung
             // 
+            this.dgvAuflistung.AllowUserToAddRows = false;
             this.dgvAuflistung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAuflistung.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvAuflistung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -162,6 +165,25 @@
             this.dgvAuflistung.Size = new System.Drawing.Size(640, 234);
             this.dgvAuflistung.TabIndex = 12;
             this.dgvAuflistung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuflistung_CellContentClick);
+            this.dgvAuflistung.SelectionChanged += new System.EventHandler(this.dgvAuflistung_SelectionChanged);
+            // 
+            // btnDropdownAnkunft
+            // 
+            this.btnDropdownAnkunft.Location = new System.Drawing.Point(616, 51);
+            this.btnDropdownAnkunft.Name = "btnDropdownAnkunft";
+            this.btnDropdownAnkunft.Size = new System.Drawing.Size(36, 23);
+            this.btnDropdownAnkunft.TabIndex = 3;
+            this.btnDropdownAnkunft.UseVisualStyleBackColor = true;
+            this.btnDropdownAnkunft.Click += new System.EventHandler(this.btnDropdownAnkunft_Click);
+            // 
+            // btnDropdownAbfahrt
+            // 
+            this.btnDropdownAbfahrt.Location = new System.Drawing.Point(288, 49);
+            this.btnDropdownAbfahrt.Name = "btnDropdownAbfahrt";
+            this.btnDropdownAbfahrt.Size = new System.Drawing.Size(36, 23);
+            this.btnDropdownAbfahrt.TabIndex = 1;
+            this.btnDropdownAbfahrt.UseVisualStyleBackColor = true;
+            this.btnDropdownAbfahrt.Click += new System.EventHandler(this.btnDropdownAbfahrt_Click);
             // 
             // Abfahrtszeit
             // 
@@ -171,7 +193,7 @@
             // 
             // Gleis
             // 
-            this.Gleis.HeaderText = "Gleis";
+            this.Gleis.HeaderText = "Gleis / Kante";
             this.Gleis.Name = "Gleis";
             this.Gleis.ReadOnly = true;
             // 
@@ -192,6 +214,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 450);
+            this.Controls.Add(this.btnDropdownAbfahrt);
+            this.Controls.Add(this.btnDropdownAnkunft);
             this.Controls.Add(this.dgvAuflistung);
             this.Controls.Add(this.btnAbfahrtstafel);
             this.Controls.Add(this.btnBeenden);
@@ -227,6 +251,8 @@
         private System.Windows.Forms.Button btnBeenden;
         private System.Windows.Forms.Button btnAbfahrtstafel;
         private System.Windows.Forms.DataGridView dgvAuflistung;
+        private System.Windows.Forms.Button btnDropdownAnkunft;
+        private System.Windows.Forms.Button btnDropdownAbfahrt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrtszeit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gleis;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ankunftsort;
