@@ -1,6 +1,6 @@
 ﻿namespace TransportGUI
 {
-    partial class Form1
+    partial class Abfahrtsplan
     {
         /// <summary>
         /// Required designer variable.
@@ -40,12 +40,12 @@
             this.btnBeenden = new System.Windows.Forms.Button();
             this.btnAbfahrtstafel = new System.Windows.Forms.Button();
             this.dgvAuflistung = new System.Windows.Forms.DataGridView();
-            this.btnDropdownAnkunft = new System.Windows.Forms.Button();
-            this.btnDropdownAbfahrt = new System.Windows.Forms.Button();
             this.Abfahrtszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gleis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ankunftsort = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ankunftszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDropdownAnkunft = new System.Windows.Forms.Button();
+            this.btnDropdownAbfahrt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuflistung)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +56,6 @@
             this.ddlAbfahrtsort.Name = "ddlAbfahrtsort";
             this.ddlAbfahrtsort.Size = new System.Drawing.Size(270, 21);
             this.ddlAbfahrtsort.TabIndex = 0;
-            this.ddlAbfahrtsort.DropDown += new System.EventHandler(this.ddlAbfahrtsort_DropDown);
             // 
             // lblAbfahrtsort
             // 
@@ -66,7 +65,6 @@
             this.lblAbfahrtsort.Size = new System.Drawing.Size(61, 13);
             this.lblAbfahrtsort.TabIndex = 1;
             this.lblAbfahrtsort.Text = "Abfahrtsort:";
-            this.lblAbfahrtsort.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblAnkunftsort
             // 
@@ -85,7 +83,7 @@
             this.btnSuchen.TabIndex = 4;
             this.btnSuchen.Text = "Verbindung suchen";
             this.btnSuchen.UseVisualStyleBackColor = true;
-            this.btnSuchen.Click += new System.EventHandler(this.button1_Click);
+            this.btnSuchen.Click += new System.EventHandler(this.Verbindungen_Click);
             // 
             // ddlAnkunftsort
             // 
@@ -94,8 +92,6 @@
             this.ddlAnkunftsort.Name = "ddlAnkunftsort";
             this.ddlAnkunftsort.Size = new System.Drawing.Size(270, 21);
             this.ddlAnkunftsort.TabIndex = 2;
-            this.ddlAnkunftsort.DropDown += new System.EventHandler(this.ddlAnkunftsort_DropDown);
-            this.ddlAnkunftsort.SelectedIndexChanged += new System.EventHandler(this.ddlAnkunftsort_SelectedIndexChanged);
             // 
             // dtpDatum
             // 
@@ -137,7 +133,7 @@
             this.btnBeenden.TabIndex = 10;
             this.btnBeenden.Text = "Beenden";
             this.btnBeenden.UseVisualStyleBackColor = true;
-            this.btnBeenden.Click += new System.EventHandler(this.btnBeenden_Click);
+            this.btnBeenden.Click += new System.EventHandler(this.BtnBeenden_Click);
             // 
             // btnAbfahrtstafel
             // 
@@ -147,6 +143,7 @@
             this.btnAbfahrtstafel.TabIndex = 11;
             this.btnAbfahrtstafel.Text = "Abfahrtstafel";
             this.btnAbfahrtstafel.UseVisualStyleBackColor = true;
+            this.btnAbfahrtstafel.Click += new System.EventHandler(this.BtnAbfahrtstafel_Click);
             // 
             // dgvAuflistung
             // 
@@ -164,26 +161,7 @@
             this.dgvAuflistung.RowHeadersVisible = false;
             this.dgvAuflistung.Size = new System.Drawing.Size(640, 234);
             this.dgvAuflistung.TabIndex = 12;
-            this.dgvAuflistung.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuflistung_CellContentClick);
-            this.dgvAuflistung.SelectionChanged += new System.EventHandler(this.dgvAuflistung_SelectionChanged);
-            // 
-            // btnDropdownAnkunft
-            // 
-            this.btnDropdownAnkunft.Location = new System.Drawing.Point(616, 51);
-            this.btnDropdownAnkunft.Name = "btnDropdownAnkunft";
-            this.btnDropdownAnkunft.Size = new System.Drawing.Size(36, 23);
-            this.btnDropdownAnkunft.TabIndex = 3;
-            this.btnDropdownAnkunft.UseVisualStyleBackColor = true;
-            this.btnDropdownAnkunft.Click += new System.EventHandler(this.btnDropdownAnkunft_Click);
-            // 
-            // btnDropdownAbfahrt
-            // 
-            this.btnDropdownAbfahrt.Location = new System.Drawing.Point(288, 49);
-            this.btnDropdownAbfahrt.Name = "btnDropdownAbfahrt";
-            this.btnDropdownAbfahrt.Size = new System.Drawing.Size(36, 23);
-            this.btnDropdownAbfahrt.TabIndex = 1;
-            this.btnDropdownAbfahrt.UseVisualStyleBackColor = true;
-            this.btnDropdownAbfahrt.Click += new System.EventHandler(this.btnDropdownAbfahrt_Click);
+            this.dgvAuflistung.SelectionChanged += new System.EventHandler(this.DgvAuflistung_SelectionChanged);
             // 
             // Abfahrtszeit
             // 
@@ -209,11 +187,29 @@
             this.Ankunftszeit.Name = "Ankunftszeit";
             this.Ankunftszeit.ReadOnly = true;
             // 
-            // Form1
+            // btnDropdownAnkunft
+            // 
+            this.btnDropdownAnkunft.Location = new System.Drawing.Point(616, 51);
+            this.btnDropdownAnkunft.Name = "btnDropdownAnkunft";
+            this.btnDropdownAnkunft.Size = new System.Drawing.Size(36, 23);
+            this.btnDropdownAnkunft.TabIndex = 3;
+            this.btnDropdownAnkunft.UseVisualStyleBackColor = true;
+            this.btnDropdownAnkunft.Click += new System.EventHandler(this.BtnDropdownAnkunft_Click);
+            // 
+            // btnDropdownAbfahrt
+            // 
+            this.btnDropdownAbfahrt.Location = new System.Drawing.Point(288, 49);
+            this.btnDropdownAbfahrt.Name = "btnDropdownAbfahrt";
+            this.btnDropdownAbfahrt.Size = new System.Drawing.Size(36, 23);
+            this.btnDropdownAbfahrt.TabIndex = 1;
+            this.btnDropdownAbfahrt.UseVisualStyleBackColor = true;
+            this.btnDropdownAbfahrt.Click += new System.EventHandler(this.BtnDropdownAbfahrt_Click);
+            // 
+            // Abfahrtsplan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 450);
+            this.ClientSize = new System.Drawing.Size(664, 451);
             this.Controls.Add(this.btnDropdownAbfahrt);
             this.Controls.Add(this.btnDropdownAnkunft);
             this.Controls.Add(this.dgvAuflistung);
@@ -228,9 +224,8 @@
             this.Controls.Add(this.lblAnkunftsort);
             this.Controls.Add(this.lblAbfahrtsort);
             this.Controls.Add(this.ddlAbfahrtsort);
-            this.Name = "Form1";
+            this.Name = "Abfahrtsplan";
             this.Text = "Abfahrtsplan";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuflistung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
