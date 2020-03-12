@@ -46,7 +46,7 @@
             this.ddlStation.Location = new System.Drawing.Point(12, 25);
             this.ddlStation.Name = "ddlStation";
             this.ddlStation.Size = new System.Drawing.Size(282, 21);
-            this.ddlStation.TabIndex = 2;
+            this.ddlStation.TabIndex = 0;
             // 
             // lblStation
             // 
@@ -64,7 +64,7 @@
             this.btnDropdownStation.Location = new System.Drawing.Point(300, 18);
             this.btnDropdownStation.Name = "btnDropdownStation";
             this.btnDropdownStation.Size = new System.Drawing.Size(32, 33);
-            this.btnDropdownStation.TabIndex = 16;
+            this.btnDropdownStation.TabIndex = 1;
             this.btnDropdownStation.UseVisualStyleBackColor = true;
             this.btnDropdownStation.Click += new System.EventHandler(this.BtnDropdownStation_Click);
             // 
@@ -75,7 +75,7 @@
             this.btnSuchen.Location = new System.Drawing.Point(11, 68);
             this.btnSuchen.Name = "btnSuchen";
             this.btnSuchen.Size = new System.Drawing.Size(283, 23);
-            this.btnSuchen.TabIndex = 17;
+            this.btnSuchen.TabIndex = 2;
             this.btnSuchen.Text = "Station anzeigen";
             this.btnSuchen.UseVisualStyleBackColor = true;
             this.btnSuchen.Click += new System.EventHandler(this.BtnSuchen_Click);
@@ -86,7 +86,7 @@
             this.btnBeenden.Location = new System.Drawing.Point(228, 119);
             this.btnBeenden.Name = "btnBeenden";
             this.btnBeenden.Size = new System.Drawing.Size(104, 23);
-            this.btnBeenden.TabIndex = 18;
+            this.btnBeenden.TabIndex = 5;
             this.btnBeenden.Text = "Beenden";
             this.btnBeenden.UseVisualStyleBackColor = true;
             this.btnBeenden.Click += new System.EventHandler(this.BtnBeenden_Click);
@@ -97,7 +97,7 @@
             this.btnAbfahrtsplan.Location = new System.Drawing.Point(12, 119);
             this.btnAbfahrtsplan.Name = "btnAbfahrtsplan";
             this.btnAbfahrtsplan.Size = new System.Drawing.Size(102, 23);
-            this.btnAbfahrtsplan.TabIndex = 19;
+            this.btnAbfahrtsplan.TabIndex = 3;
             this.btnAbfahrtsplan.Text = "Abfahrtsplan";
             this.btnAbfahrtsplan.UseVisualStyleBackColor = true;
             this.btnAbfahrtsplan.Click += new System.EventHandler(this.BtnAbfahrtsplan_Click);
@@ -108,7 +108,7 @@
             this.btnAbfahrtstafel.Location = new System.Drawing.Point(120, 119);
             this.btnAbfahrtstafel.Name = "btnAbfahrtstafel";
             this.btnAbfahrtstafel.Size = new System.Drawing.Size(102, 23);
-            this.btnAbfahrtstafel.TabIndex = 20;
+            this.btnAbfahrtstafel.TabIndex = 4;
             this.btnAbfahrtstafel.Text = "Abfahrtstafel";
             this.btnAbfahrtstafel.UseVisualStyleBackColor = true;
             this.btnAbfahrtstafel.Click += new System.EventHandler(this.BtnAbfahrtstafel_Click);

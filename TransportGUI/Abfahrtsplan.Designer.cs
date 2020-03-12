@@ -100,7 +100,7 @@
             this.btnBeenden.Location = new System.Drawing.Point(550, 415);
             this.btnBeenden.Name = "btnBeenden";
             this.btnBeenden.Size = new System.Drawing.Size(102, 23);
-            this.btnBeenden.TabIndex = 6;
+            this.btnBeenden.TabIndex = 7;
             this.btnBeenden.Text = "Beenden";
             this.btnBeenden.UseVisualStyleBackColor = true;
             this.btnBeenden.Click += new System.EventHandler(this.BtnBeenden_Click);
@@ -189,7 +189,7 @@
             this.btnOrt.Location = new System.Drawing.Point(120, 415);
             this.btnOrt.Name = "btnOrt";
             this.btnOrt.Size = new System.Drawing.Size(102, 23);
-            this.btnOrt.TabIndex = 13;
+            this.btnOrt.TabIndex = 6;
             this.btnOrt.Text = "Station anzeigen";
             this.btnOrt.UseVisualStyleBackColor = true;
             this.btnOrt.Click += new System.EventHandler(this.BtnOrt_Click);
