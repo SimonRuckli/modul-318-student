@@ -18,6 +18,11 @@ namespace TransportGUI
         public Abfahrtsplan()
         {
             InitializeComponent();
+            btnDropdownAbfahrt.FlatStyle = FlatStyle.Flat;
+            btnDropdownAbfahrt.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            btnDropdownAnkunft.FlatStyle = FlatStyle.Flat;
+            btnDropdownAnkunft.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            MinimumSize = new Size(680, 490);
         }
 
         /// <summary>
@@ -27,7 +32,7 @@ namespace TransportGUI
         /// <param name="e"></param>
         private void BtnBeenden_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         /// <summary>
@@ -139,8 +144,31 @@ namespace TransportGUI
         /// <param name="e"></param>
         private void BtnAbfahrtstafel_Click(object sender, EventArgs e)
         {
+            Hide();
             Abfahrtstafel abfahrtstafel = new Abfahrtstafel();
             abfahrtstafel.ShowDialog();
+        }
+
+        /// <summary>
+        /// Dieses Event stellt sicher, dass die Applikation richtig schliesst, wenn man es über das rote X macht.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Abfahrtsplan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// Durch dieses Event switcht man von diesem Form zum Ortsformular.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnOrt_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Ort ort = new Ort();
+            ort.ShowDialog();
         }
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="Abfahrtsplan.Designer.cs">
       <DependentUpon>Abfahrtsplan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ort.Designer.cs">
+      <DependentUpon>Ort.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Abfahrtstafel.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Abfahrtsplan.resx">
       <DependentUpon>Abfahrtsplan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ort.resx">
+      <DependentUpon>Ort.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

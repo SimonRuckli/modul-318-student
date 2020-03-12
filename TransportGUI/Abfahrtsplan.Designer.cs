@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Abfahrtsplan));
             this.ddlAbfahrtsort = new System.Windows.Forms.ComboBox();
             this.lblAbfahrtsort = new System.Windows.Forms.Label();
             this.lblAnkunftsort = new System.Windows.Forms.Label();
             this.btnSuchen = new System.Windows.Forms.Button();
             this.ddlAnkunftsort = new System.Windows.Forms.ComboBox();
-            this.dtpDatum = new System.Windows.Forms.DateTimePicker();
-            this.lblDatum = new System.Windows.Forms.Label();
-            this.txtZeit = new System.Windows.Forms.TextBox();
-            this.lblZeit = new System.Windows.Forms.Label();
             this.btnBeenden = new System.Windows.Forms.Button();
             this.btnAbfahrtstafel = new System.Windows.Forms.Button();
             this.dgvAuflistung = new System.Windows.Forms.DataGridView();
@@ -46,6 +43,7 @@
             this.Ankunftszeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDropdownAnkunft = new System.Windows.Forms.Button();
             this.btnDropdownAbfahrt = new System.Windows.Forms.Button();
+            this.btnOrt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuflistung)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +66,7 @@
             // 
             // lblAnkunftsort
             // 
+            this.lblAnkunftsort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAnkunftsort.AutoSize = true;
             this.lblAnkunftsort.Location = new System.Drawing.Point(472, 35);
             this.lblAnkunftsort.Name = "lblAnkunftsort";
@@ -77,7 +76,8 @@
             // 
             // btnSuchen
             // 
-            this.btnSuchen.Location = new System.Drawing.Point(340, 117);
+            this.btnSuchen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSuchen.Location = new System.Drawing.Point(340, 113);
             this.btnSuchen.Name = "btnSuchen";
             this.btnSuchen.Size = new System.Drawing.Size(312, 23);
             this.btnSuchen.TabIndex = 4;
@@ -87,60 +87,31 @@
             // 
             // ddlAnkunftsort
             // 
+            this.ddlAnkunftsort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ddlAnkunftsort.FormattingEnabled = true;
             this.ddlAnkunftsort.Location = new System.Drawing.Point(340, 51);
             this.ddlAnkunftsort.Name = "ddlAnkunftsort";
             this.ddlAnkunftsort.Size = new System.Drawing.Size(270, 21);
             this.ddlAnkunftsort.TabIndex = 2;
             // 
-            // dtpDatum
-            // 
-            this.dtpDatum.Location = new System.Drawing.Point(137, 120);
-            this.dtpDatum.Name = "dtpDatum";
-            this.dtpDatum.Size = new System.Drawing.Size(187, 20);
-            this.dtpDatum.TabIndex = 6;
-            // 
-            // lblDatum
-            // 
-            this.lblDatum.AutoSize = true;
-            this.lblDatum.Location = new System.Drawing.Point(201, 104);
-            this.lblDatum.Name = "lblDatum";
-            this.lblDatum.Size = new System.Drawing.Size(41, 13);
-            this.lblDatum.TabIndex = 7;
-            this.lblDatum.Text = "Datum:";
-            // 
-            // txtZeit
-            // 
-            this.txtZeit.Location = new System.Drawing.Point(12, 119);
-            this.txtZeit.Name = "txtZeit";
-            this.txtZeit.Size = new System.Drawing.Size(119, 20);
-            this.txtZeit.TabIndex = 8;
-            // 
-            // lblZeit
-            // 
-            this.lblZeit.AutoSize = true;
-            this.lblZeit.Location = new System.Drawing.Point(53, 104);
-            this.lblZeit.Name = "lblZeit";
-            this.lblZeit.Size = new System.Drawing.Size(28, 13);
-            this.lblZeit.TabIndex = 9;
-            this.lblZeit.Text = "Zeit:";
-            // 
             // btnBeenden
             // 
+            this.btnBeenden.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBeenden.Location = new System.Drawing.Point(550, 415);
             this.btnBeenden.Name = "btnBeenden";
             this.btnBeenden.Size = new System.Drawing.Size(102, 23);
-            this.btnBeenden.TabIndex = 10;
+            this.btnBeenden.TabIndex = 6;
             this.btnBeenden.Text = "Beenden";
             this.btnBeenden.UseVisualStyleBackColor = true;
             this.btnBeenden.Click += new System.EventHandler(this.BtnBeenden_Click);
             // 
             // btnAbfahrtstafel
             // 
+            this.btnAbfahrtstafel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAbfahrtstafel.Location = new System.Drawing.Point(12, 415);
             this.btnAbfahrtstafel.Name = "btnAbfahrtstafel";
             this.btnAbfahrtstafel.Size = new System.Drawing.Size(102, 23);
-            this.btnAbfahrtstafel.TabIndex = 11;
+            this.btnAbfahrtstafel.TabIndex = 5;
             this.btnAbfahrtstafel.Text = "Abfahrtstafel";
             this.btnAbfahrtstafel.UseVisualStyleBackColor = true;
             this.btnAbfahrtstafel.Click += new System.EventHandler(this.BtnAbfahrtstafel_Click);
@@ -148,6 +119,9 @@
             // dgvAuflistung
             // 
             this.dgvAuflistung.AllowUserToAddRows = false;
+            this.dgvAuflistung.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAuflistung.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAuflistung.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvAuflistung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -161,6 +135,7 @@
             this.dgvAuflistung.RowHeadersVisible = false;
             this.dgvAuflistung.Size = new System.Drawing.Size(640, 234);
             this.dgvAuflistung.TabIndex = 12;
+            this.dgvAuflistung.TabStop = false;
             this.dgvAuflistung.SelectionChanged += new System.EventHandler(this.DgvAuflistung_SelectionChanged);
             // 
             // Abfahrtszeit
@@ -189,36 +164,47 @@
             // 
             // btnDropdownAnkunft
             // 
-            this.btnDropdownAnkunft.Location = new System.Drawing.Point(616, 51);
+            this.btnDropdownAnkunft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDropdownAnkunft.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDropdownAnkunft.BackgroundImage")));
+            this.btnDropdownAnkunft.Location = new System.Drawing.Point(620, 44);
             this.btnDropdownAnkunft.Name = "btnDropdownAnkunft";
-            this.btnDropdownAnkunft.Size = new System.Drawing.Size(36, 23);
+            this.btnDropdownAnkunft.Size = new System.Drawing.Size(32, 33);
             this.btnDropdownAnkunft.TabIndex = 3;
             this.btnDropdownAnkunft.UseVisualStyleBackColor = true;
             this.btnDropdownAnkunft.Click += new System.EventHandler(this.BtnDropdownAnkunft_Click);
             // 
             // btnDropdownAbfahrt
             // 
-            this.btnDropdownAbfahrt.Location = new System.Drawing.Point(288, 49);
+            this.btnDropdownAbfahrt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDropdownAbfahrt.BackgroundImage")));
+            this.btnDropdownAbfahrt.Location = new System.Drawing.Point(288, 44);
             this.btnDropdownAbfahrt.Name = "btnDropdownAbfahrt";
-            this.btnDropdownAbfahrt.Size = new System.Drawing.Size(36, 23);
+            this.btnDropdownAbfahrt.Size = new System.Drawing.Size(32, 33);
             this.btnDropdownAbfahrt.TabIndex = 1;
             this.btnDropdownAbfahrt.UseVisualStyleBackColor = true;
             this.btnDropdownAbfahrt.Click += new System.EventHandler(this.BtnDropdownAbfahrt_Click);
+            // 
+            // btnOrt
+            // 
+            this.btnOrt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnOrt.Location = new System.Drawing.Point(120, 415);
+            this.btnOrt.Name = "btnOrt";
+            this.btnOrt.Size = new System.Drawing.Size(102, 23);
+            this.btnOrt.TabIndex = 13;
+            this.btnOrt.Text = "Station anzeigen";
+            this.btnOrt.UseVisualStyleBackColor = true;
+            this.btnOrt.Click += new System.EventHandler(this.BtnOrt_Click);
             // 
             // Abfahrtsplan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 451);
+            this.Controls.Add(this.btnOrt);
             this.Controls.Add(this.btnDropdownAbfahrt);
             this.Controls.Add(this.btnDropdownAnkunft);
             this.Controls.Add(this.dgvAuflistung);
             this.Controls.Add(this.btnAbfahrtstafel);
             this.Controls.Add(this.btnBeenden);
-            this.Controls.Add(this.lblZeit);
-            this.Controls.Add(this.txtZeit);
-            this.Controls.Add(this.lblDatum);
-            this.Controls.Add(this.dtpDatum);
             this.Controls.Add(this.ddlAnkunftsort);
             this.Controls.Add(this.btnSuchen);
             this.Controls.Add(this.lblAnkunftsort);
@@ -226,6 +212,7 @@
             this.Controls.Add(this.ddlAbfahrtsort);
             this.Name = "Abfahrtsplan";
             this.Text = "Abfahrtsplan";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Abfahrtsplan_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuflistung)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,19 +226,16 @@
         private System.Windows.Forms.Label lblAnkunftsort;
         private System.Windows.Forms.Button btnSuchen;
         private System.Windows.Forms.ComboBox ddlAnkunftsort;
-        private System.Windows.Forms.DateTimePicker dtpDatum;
-        private System.Windows.Forms.Label lblDatum;
-        private System.Windows.Forms.TextBox txtZeit;
-        private System.Windows.Forms.Label lblZeit;
         private System.Windows.Forms.Button btnBeenden;
         private System.Windows.Forms.Button btnAbfahrtstafel;
         private System.Windows.Forms.DataGridView dgvAuflistung;
         private System.Windows.Forms.Button btnDropdownAnkunft;
-        private System.Windows.Forms.Button btnDropdownAbfahrt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrtszeit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gleis;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ankunftsort;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ankunftszeit;
+        private System.Windows.Forms.Button btnDropdownAbfahrt;
+        private System.Windows.Forms.Button btnOrt;
     }
 }
 

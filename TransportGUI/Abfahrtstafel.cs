@@ -17,6 +17,7 @@ namespace TransportGUI
         public Abfahrtstafel()
         {
             InitializeComponent();
+            MinimumSize = new Size(680, 490);
         }
 
         /// <summary>
@@ -47,13 +48,25 @@ namespace TransportGUI
         }
 
         /// <summary>
-        /// Durch klicken des "Abfahrtsplan-Buttons" wird dieses Event gefeuert, was das Schliessen des Formulars zur Folge trägt.
+        /// Durch klicken des "Abfahrtsplan-Buttons" wird dieses Event gefeuert, welches das Abfahrtsplan-Formular öffnet.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void BtnAbfahrtsplan_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
+            Abfahrtsplan abfahrtsplan = new Abfahrtsplan();
+            abfahrtsplan.ShowDialog();
+        }
+
+        /// <summary>
+        /// Diese Funktion verhindert, das im DataGridView etwas markiert werden kann.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DgvAuflistung_SelectionChanged(object sender, EventArgs e)
+        {
+            dgvAuflistung.ClearSelection();
         }
 
         /// <summary>
@@ -66,7 +79,7 @@ namespace TransportGUI
         {
             ddlAbfahrtsort.Items.Clear();
             Abfahrtsplan.Suchen(ddlAbfahrtsort);
-            if(ddlAbfahrtsort.Text != null && ddlAbfahrtsort.Text != "")
+            if (ddlAbfahrtsort.Text != null && ddlAbfahrtsort.Text != "")
             {
                 ddlAbfahrtsort.DroppedDown = true;
             }
@@ -74,13 +87,35 @@ namespace TransportGUI
         }
 
         /// <summary>
-        /// Diese Funktion verhindert, das im DataGridView etwas markiert werden kann.
+        /// Durch dieses Event wird das Formular geschlossen.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DgvAuflistung_SelectionChanged(object sender, EventArgs e)
+        private void BtnBeenden_Click(object sender, EventArgs e)
         {
-            dgvAuflistung.ClearSelection();
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// Dieses Event stellt sicher, dass die Applikation richtig schliesst, wenn man es über das rote X macht.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Abfahrtstafel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// Durch dieses Event switcht man von diesem Form zum Ortsformular.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnOrt_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Ort ort = new Ort();
+            ort.ShowDialog();
         }
     }
 }

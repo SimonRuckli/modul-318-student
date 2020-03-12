@@ -117,36 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Abfahrtszeit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Gleis.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Ankunftsort.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Ankunftszeit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnDropdownAnkunft.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAlFJREFUSEvt
-        lu9LE3Ecx0dB1LPoUY/rT+gf2F+worgHQQ8iYjWjMC24nTOumGDNcWkmWzZaRENOLRq7ZTU7jA2nXGhb
-        yqa5wkVFsYo0TQk/3fcHtZOD7uq+9cQXvB+8P9/P9uJ2dzDXf+WwKG338dIuFmk4e2kn1Rjx8lKr1y+t
-        6QFWOeaXhjhO3kyVBP1gwdfStSZ23gIWaTzfg+VH+c49VElAw6ZgBPLPZpkkdK0fi4/zkpsqCWh4UuyG
-        m4MZJgmE41jcEOjaT5UENPwX0S+ukSoJpy5chaa2CIRjA0widMQAOZqDkYNUSeBD16E92geskNMjgBx8
-        qNd4jzfEiHKlCtG+FGjFGdzV/CTuVoJ267ElRkI0f5R7ivuvD/8+aLceW+KV1VX4+HkBlr+t4L64tIy7
-        laDdep5MlGGsNA/yg1EfVRLMxE6SK87BdLUGg8N543tsJnbyp7YlLpYreJbVnuOuqGO4WwnarceW2Els
-        ib8sLsHc/Bv8sCDe1z7hbiVoF/G29hUmX3yA25kCJEcrcCOZFaiSYCZ24h4nMjPgEZSfaYur3VRJQMvr
-        xS9fv8NfMDX7CvfxQgl3K0G7iD8SO8GG2FR87nLc9H5ZjapNQVb/f5XKTUNrLIfj7Rg2iA8F7xc8Qjrq
-        8Stht6huxeK/TbAnAeOlKn5fpYEJg3Bdvnv8KQ+94l63E7mSSB64O6I131G1M0faH2omUtgrKCewlBWc
-        KG/RRY8N4hblIj1mCycO7dCFJSJO9YuiuIkesWdfIL1bf6DucaflbXREcbl+ALr0vCLSCwJPAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
-  <data name="btnDropdownAbfahrt.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDropdownStation.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAlFJREFUSEvt
         lu9LE3Ecx0dB1LPoUY/rT+gf2F+worgHQQ8iYjWjMC24nTOumGDNcWkmWzZaRENOLRq7ZTU7jA2nXGhb
